@@ -5,7 +5,7 @@ import os.path as osp
 import time
 import warnings
 
-from mycv.utils import DictAction
+from mycv.utils import Config, DictAction
 
 
 def parse_args():
@@ -93,6 +93,8 @@ def parse_args():
 
 def main():
     args = parse_args()
+    cfg = Config.fromfile(args.config)
+    print('over')
 
 
 if __name__ == '__main__':
